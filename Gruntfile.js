@@ -11,13 +11,15 @@ module.exports = function(grunt) {
   grunt.initConfig({
     
     watch: {
-      files: ['less/*.less'],
-      tasks: ['less:development'],
       options: {
         interval: 20
       },
+      less: {
+        files: ['less/*.less'],
+        tasks: ['less:development'],
+      },
       all: {
-        files: ['*', '!less/*.less'],
+        files: ['*/**', '!node_modules/*/**', '!less/*.less'],
         options: {
           livereload: true
         }
