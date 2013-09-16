@@ -2,8 +2,9 @@
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="" />
 		<link rel="stylesheet" href="/css/style.css" />
-		<title>Megan Tong Gallery</title>
+		<title>Site Title</title>
 		<!--[if lt IE 9]>
 		<script>
 			document.createElement('header');
@@ -16,10 +17,10 @@
 		<![endif]-->
 	</head>
 	<body>
-		<div id="scroll-wall">
-			<section id="paintings">
-			
-			</section>
-		</div>
+		<?php require('header.php'); ?>
+		
+		Body content
+		
+		<?php require('footer.php'); ?>
 	</body>
 </html>

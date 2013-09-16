@@ -3,10 +3,15 @@ module.exports = function(grunt) {
   /*-------------------------------------------- */
   /** Project Config */
   /*-------------------------------------------- */
+  
   var lessOptionsPaths = ['less'],
     lessFiles = {
       'css/style.css': 'less/style.less'
     };
+
+  var jsOptionsPaths = ['js'],
+    jsFiles = ['js/scripts.js'],
+    uglifyFiles = { 'js/scripts.min.js': jsFiles };
 
   grunt.initConfig({
     
@@ -42,7 +47,20 @@ module.exports = function(grunt) {
         },
         files: lessFiles
       }
+    },
+
+    uglify: {
+
+      development: {
+        files: uglifyFiles
+      }
+
+    },
+
+    jshint: {
+      files: jsFiles
     }
+
   });
 
   /*-------------------------------------------- */
@@ -51,4 +69,6 @@ module.exports = function(grunt) {
   
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 };
