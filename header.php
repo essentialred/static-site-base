@@ -18,3 +18,4 @@
 		<script src="js/vendor/angular.min.js"></script>
 	</head>
 	<body>
+		<header>Header content</header>
